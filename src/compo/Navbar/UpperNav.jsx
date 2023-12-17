@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function UpperNav() {
   return (
@@ -36,4 +36,4 @@ function UpperNav() {
   );
 }
 
-export default UpperNav
+export default UpperNav;

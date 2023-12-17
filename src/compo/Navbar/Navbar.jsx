@@ -5,8 +5,8 @@ import LowerNav from "./LowerNav";
 export default function Navbar() {
   return (
     <>
-      <UpperNav/>
-      <LowerNav/>
+      <UpperNav />
+      <LowerNav />
     </>
   );
 }

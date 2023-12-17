@@ -40,7 +40,9 @@ function BoxLine() {
   return (
     <>
       <div className="flex flex-col mt-20">
-        <h3 className="text-[ #3C4852] text-center font-medium text-2xl">Popular Goal</h3>
+        <h3 className="text-[ #3C4852] text-center font-medium text-2xl">
+          Popular Goal
+        </h3>
         <div className="flex flex-wrap  justify-center">
           <Box img={property.property1.img1} />
           <Box img={property.property2.img2} />

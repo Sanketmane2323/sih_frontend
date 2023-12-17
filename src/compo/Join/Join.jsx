@@ -4,7 +4,7 @@ function Join() {
   return (
     <div className="flex items-center mt-10 justify-around ">
       <div className="flex flex-col items-center mt-7  ">
-        <div >
+        <div>
           <h2 className=" text-xl font-medium text-[#3C4852] md:text-4xl lg:text-4xl 2xl:text-4xl xl:text-4xl">
             Start learning with Studify
           </h2>

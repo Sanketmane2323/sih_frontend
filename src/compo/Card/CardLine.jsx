@@ -24,9 +24,21 @@ function CardLine() {
   };
   return (
     <div className="flex flex-wrap justify-center mt-20">
-      <Card img={property.p1.img1} heading={property.p1.h1} para={property.p1.para1} />
-      <Card img={property.p2.img2} heading={property.p2.h2} para={property.p2.para2} />
-      <Card img={property.p3.img3} heading={property.p3.h3} para={property.p3.para3} />
+      <Card
+        img={property.p1.img1}
+        heading={property.p1.h1}
+        para={property.p1.para1}
+      />
+      <Card
+        img={property.p2.img2}
+        heading={property.p2.h2}
+        para={property.p2.para2}
+      />
+      <Card
+        img={property.p3.img3}
+        heading={property.p3.h3}
+        para={property.p3.para3}
+      />
     </div>
   );
 }

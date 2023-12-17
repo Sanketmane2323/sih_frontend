@@ -1,22 +1,31 @@
 import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "flowbite";
-import Navbar from "./compo/Navbar/Navbar";
-import Hero from "./compo/Hero/Hero";
-import BoxLine from "./compo/PopularSection/BoxLine";
-import CardLine from "./compo/Card/CardLine";
-import Join from "./compo/Join/Join";
-import Footer from "./compo/Footer/Footer";
+import Home from "./pages/Home";
+import StudyMaterial from "./pages/StudyMaterial";
+import Employment from "./pages/Employment";
+import Loan from "./pages/Loan";
+import Research from "./pages/Research";
+import Root from "./pages/Root";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/studymaterial", element: <StudyMaterial /> },
+      { path: "/employment", element: <Employment /> },
+      { path: "/loan", element: <Loan /> },
+      { path: "/research", element: <Research /> },
+    ],
+  },
+]);
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <BoxLine/>
-      <CardLine/>
-      <Join/>
-      <Footer/>
+      <RouterProvider router={router} />
     </>
   );
 }

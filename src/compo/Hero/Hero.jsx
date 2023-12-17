@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export default function Hero() {
   return (
     <div className=" sm:flex  container justify-evenly mt-8 items-center  mx-auto mb-8">
@@ -17,7 +16,7 @@ export default function Hero() {
       <div>
         <img
           className="max-h-[600px]"
-          src="public/Images/India.svg"
+          src="/Images/India.svg"
           alt="India Flags"
         />
       </div>
