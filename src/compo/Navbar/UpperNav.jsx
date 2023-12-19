@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 
 function UpperNav() {
   return (
@@ -23,12 +24,18 @@ function UpperNav() {
             >
               (+91) 022857
             </a> */}
-            <a
-              href="http://127.0.0.1:8000/user_login/"
-              className="text-sm  text-blue-500 dark:text-blue-500 hover:underline"
+            <Link
+              to="/login"
+              className="text-sm text-blue-500  dark:text-blue-500 hover:underline"
             >
               Login
-            </a>
+            </Link>
+            <Link
+              to="/signup"
+              className="text-sm mx-4 text-blue-500 dark:text-blue-500 hover:underline"
+            >
+              SignUp
+            </Link>
           </div>
         </div>
       </nav>

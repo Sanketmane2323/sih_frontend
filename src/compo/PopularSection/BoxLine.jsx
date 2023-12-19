@@ -44,16 +44,16 @@ function BoxLine() {
           Popular Goal
         </h3>
         <div className="flex flex-wrap  justify-center">
-          <Box img={property.property1.img1} />
-          <Box img={property.property2.img2} />
-          <Box img={property.property3.img3} />
-          <Box img={property.property4.img4} />
+          <Box img={property.property1.img1} name={property.property1.p1} />
+          <Box img={property.property2.img2} name={property.property2.p2} />
+          <Box img={property.property3.img3} name={property.property3.p3} />
+          <Box img={property.property4.img4} name={property.property4.p4} />
         </div>
         <div className="flex flex-wrap  justify-center">
-          <Box img={property.property5.img5} />
-          <Box img={property.property6.img6} />
-          <Box img={property.property7.img7} />
-          <Box img={property.property8.img8} />
+          <Box img={property.property5.img5} name={property.property5.p5} />
+          <Box img={property.property6.img6} name={property.property6.p6} />
+          <Box img={property.property7.img7} name={property.property7.p7} />
+          <Box img={property.property8.img8} name={property.property8.p8} />
         </div>
       </div>
     </>
