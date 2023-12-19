@@ -1,5 +1,6 @@
 import React from "react";
 import Box from "./Box";
+import { Link } from "react-router-dom";
 
 function BoxLine() {
   const property = {
@@ -9,11 +10,11 @@ function BoxLine() {
     },
     property2: {
       img2: "public/Images/img3.svg",
-      p2: "Assessment",
+      p2: "JobPost",
     },
     property3: {
       img3: "public/Images/img4.svg",
-      p3: "Centers",
+      p3: "News",
     },
     property4: {
       img4: "public/Images/img5.svg",
@@ -44,9 +45,13 @@ function BoxLine() {
           Popular Goal
         </h3>
         <div className="flex flex-wrap  justify-center">
-          <Box img={property.property1.img1} name={property.property1.p1} />
-          <Box img={property.property2.img2} name={property.property2.p2} />
-          <Box img={property.property3.img3} name={property.property3.p3} />
+          <Link to="/loan">
+            <Box img={property.property1.img1} name={property.property1.p1} />
+          </Link>
+          <Link to="/jobpost ">
+            <Box img={property.property2.img2} name={property.property2.p2} />
+          </Link>
+          <Box img={property.property6.img6} name={property.property3.p3} />
           <Box img={property.property8.img8} name={property.property4.p4} />
         </div>
         {/* <div className="flex flex-wrap  justify-center">
