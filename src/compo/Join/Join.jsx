@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Join() {
   return (
@@ -15,13 +16,14 @@ function Join() {
             sessions.
           </h3>
         </div>
-
-        <button
-          type="button"
-          class="text-white bg-[#08BD80] dark:bg-blue-500  font-bold rounded-lg text-md px-6 py-3 text-center"
-        >
-          Start Learning
-        </button>
+        <Link to="/signup">
+          <button
+            type="button"
+            class="text-white bg-[#08BD80] dark:bg-blue-500  font-bold rounded-lg text-md px-6 py-3 text-center"
+          >
+            Start Learning
+          </button>
+        </Link>
       </div>
       <div>
         <img className="pl-3" src="/Images/join.svg" alt="Join us" />

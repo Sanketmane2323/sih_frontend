@@ -10,9 +10,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 )
 
 
-    //   <Navbar />
-    //   <Hero />
-    //   <BoxLine />
-    //   <CardLine />
-    //   <Join />
-    //   <Footer />

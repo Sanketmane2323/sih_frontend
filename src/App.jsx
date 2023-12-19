@@ -2,11 +2,15 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "flowbite";
 import Home from "./pages/Home";
-import StudyMaterial from "./pages/StudyMaterial";
-import Employment from "./pages/Employment";
-import Loan from "./pages/Loan";
+
 import Research from "./pages/Research";
 import Root from "./pages/Root";
+import LoginForm from "./pages/LoginForm";
+import Signup from "./pages/signup";
+import JobView from "./pages/jobView";
+import LoanPage from "./pages/loanPage";
+import StudyMaterial from "./pages/StudyMaterial";
+
 
 const router = createBrowserRouter([
   {
@@ -15,9 +19,11 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/studymaterial", element: <StudyMaterial /> },
-      { path: "/employment", element: <Employment /> },
-      { path: "/loan", element: <Loan /> },
+      { path: "/jobs", element: <JobView /> },
+      { path: "/loan", element: <LoanPage /> },
       { path: "/research", element: <Research /> },
+      { path: "/login", element: <LoginForm /> },
+      { path: "/signup", element: <Signup /> },
     ],
   },
 ]);
