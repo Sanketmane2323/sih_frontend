@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Hero() {
   return (
     <div className=" sm:flex  container justify-evenly mt-32 items-center  mx-auto mb-8">

@@ -1,4 +1,4 @@
-// import React from "react";
+//  ;
 
 // const NewsNav = () => {
 //   return (
@@ -31,7 +31,6 @@
 
 // export default NewsNav;
 // NewsNav.js
-import React from "react";
 import { Link, Route, Switch, Router } from "react-router-dom";
 
 import TechnologyNews from "./TechnologyNews";

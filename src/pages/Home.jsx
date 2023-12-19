@@ -1,4 +1,3 @@
-import React from "react";
 // import Navbar from '../compo/Navbar/Navbar'
 import BoxLine from "../compo/PopularSection/BoxLine";
 import Hero from "../compo/Hero/Hero";
@@ -7,12 +6,11 @@ import Join from "../compo/Join/Join";
 import Footer from "../compo/Footer/Footer";
 import LogoutButton from "./logout";
 
-
 function Home() {
   return (
     <div>
       <Hero />
-      <LogoutButton/>
+      <LogoutButton />
       <BoxLine />
       <CardLine />
       <Join />
@@ -22,4 +20,3 @@ function Home() {
 }
 
 export default Home;
-

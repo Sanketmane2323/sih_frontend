@@ -29,6 +29,9 @@ const Signup = () => {
       if (response.ok) {
         const data = await response.json();
         console.log("Signup successful:", data);
+
+        // Store the token in a cookie
+        document.cookie = `token=${data.token}; expires=Fri, 31 Dec 2023 23:59:59 GMT`;
       } else {
         const errorData = await response.json();
         console.error("Signup failed:", errorData);
