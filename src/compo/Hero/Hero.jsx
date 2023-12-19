@@ -5,8 +5,7 @@ export default function Hero() {
     <div className=" sm:flex  container justify-evenly mt-32 items-center  mx-auto mb-8">
       <div className=" max-h-96 flex flex-col ">
         <h2 className="container text-4xl text-[#3C4852]  font-bold mb-11 ">
-          Historic & Unparalleled Achievement ! India’s Glorious Journey of
-          Eduacation
+          Building Viksit Bharat: Your Roadmap to a Developed India in 2047!
         </h2>
         <div className="max-w-lg font-semibold">
           <p>Education is one thing that no one can take away from you.</p>
