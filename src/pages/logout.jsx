@@ -1,12 +1,19 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LogoutButton = () => {
+  const navigate = useNavigate();
+
   // localStorage.removeItem('token')
   const [message, setMessage] = useState("");
 
   const handleLogout = async () => {
     try {
-      const token = localStorage.getItem("token");
+      // Get the token from the cookie
+      const token = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("token="))
+        .split("=")[1];
 
       if (!token) {
         setMessage("Token not found. Please log in.");
@@ -22,7 +29,12 @@ const LogoutButton = () => {
       });
 
       if (response.ok) {
-        localStorage.removeItem("token");
+        // Remove the token from the cookie
+        document.cookie =
+          "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+
+        navigate("/");
+
         const data = await response.json();
         setMessage(data.detail);
       } else {
