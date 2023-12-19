@@ -5,9 +5,9 @@ function CardLine() {
   const property = {
     p1: {
       img1: "/Images/LiveClasses.svg",
-      h1: "Live classes",
+      h1: "Resume Building",
       para1:
-        "Chat with educators, ask questions, answer live polls, and get your doubts cleared - all while the class is going on",
+        "Build a resume that opens doors to opportunities using our Auto-generating Resume builder  to get employed",
     },
     p2: {
       img2: "/Images/Practice.svg",
@@ -17,9 +17,9 @@ function CardLine() {
     },
     p3: {
       img3: "/Images/Learn.svg",
-      h3: "Learn anytime, anywhere",
+      h3: "Mentor Help ",
       para3:
-        "One subscription gets you access to all our live and recorded classes to watch from the comfort of any of your devices",
+        "Whether you're navigating your career, starting a new venture, or seeking personal growth – our mentors are here for you",
     },
   };
   return (
