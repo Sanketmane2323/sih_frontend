@@ -7,12 +7,10 @@ import Join from "../compo/Join/Join";
 import Footer from "../compo/Footer/Footer";
 import LogoutButton from "./logout";
 
-
 function Home() {
   return (
     <div>
       <Hero />
-      <LogoutButton />
       <BoxLine />
       <CardLine />
       <Join />
