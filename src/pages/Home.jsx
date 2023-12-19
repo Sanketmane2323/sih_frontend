@@ -12,7 +12,7 @@ function Home() {
   return (
     <div>
       <Hero />
-      <LogoutButton/>
+      <LogoutButton />
       <BoxLine />
       <CardLine />
       <Join />
@@ -22,4 +22,3 @@ function Home() {
 }
 
 export default Home;
-
