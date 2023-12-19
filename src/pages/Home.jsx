@@ -14,6 +14,7 @@ function Home() {
       <BoxLine />
       <CardLine />
       <Join />
+      
       <Footer />
     </div>
   );

@@ -36,7 +36,7 @@ function UpperNav() {
               className="h-8 mr-3"
               alt="Flowbite Logo"
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center text-2xl text-[#3C4852]  font-semibold whitespace-nowrap dark:text-white">
               Ministry of India
             </span>
           </div>
@@ -45,13 +45,13 @@ function UpperNav() {
               <>
                 <Link
                   to="/login"
-                  className="text-sm text-blue-500  dark:text-blue-500 hover:underline"
+                  className="text-sm text-[#08BD80]   dark:text-blue-500 hover:underline"
                 >
                   Login
                 </Link>
                 <Link
                   to="/signup"
-                  className="text-sm mx-4 text-blue-500 dark:text-blue-500 hover:underline"
+                  className="text-sm mx-4 text-[#08BD80] dark:text-blue-500 hover:underline"
                 >
                   SignUp
                 </Link>

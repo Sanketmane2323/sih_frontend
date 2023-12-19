@@ -31,11 +31,13 @@ const TechnologyNews = () => {
           >
             <img className="w-full" src={n.urlToImage} alt="" />
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">{n.title}</div>
-              <p className="text-gray-700 text-base">{n.description}</p>
+              <div className="font-bold text-xl text-[#3C4852]  mb-2">
+                {n.title}
+              </div>
+              <p className="text-[#3C4852]  text-base">{n.description}</p>
             </div>
             <div className="px-6 pt-4 pb-2">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              <button className="bg-[#08BD80] hover:bg-[#31a985] text-white font-bold py-2 px-4 rounded">
                 <a href={n.url}>Read more</a>
               </button>
             </div>

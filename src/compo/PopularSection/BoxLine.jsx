@@ -51,7 +51,9 @@ function BoxLine() {
           <Link to="/jobpost ">
             <Box img={property.property2.img2} name={property.property2.p2} />
           </Link>
-          <Box img={property.property6.img6} name={property.property3.p3} />
+          <Link to="/news">
+            <Box img={property.property6.img6} name={property.property3.p3} />
+          </Link>
           <Box img={property.property8.img8} name={property.property4.p4} />
         </div>
         {/* <div className="flex flex-wrap  justify-center">
