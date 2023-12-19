@@ -9,7 +9,7 @@ export default function Footer() {
             <div class="mb-6 md:mb-0">
               <a href="/" class="flex items-center">
                 <img
-                  src="public/Images/study.png"
+                  src="/Images/study.png"
                   class="h-8 mr-3"
                   alt="Studify Logo"
                 />
@@ -42,18 +42,12 @@ export default function Footer() {
                 </h2>
                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
                   <li class="mb-4">
-                    <a
-                      href="https://github.com/"
-                      class="hover:underline "
-                    >
+                    <a href="https://github.com/" class="hover:underline ">
                       Github
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="https://discord.gg/"
-                      class="hover:underline"
-                    >
+                    <a href="https://discord.gg/" class="hover:underline">
                       Discord
                     </a>
                   </li>

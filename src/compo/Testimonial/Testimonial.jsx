@@ -11,17 +11,17 @@ function Testimonial() {
                 <img
                   alt="testimonial"
                   class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src="public/Images/p1.svg"
+                  src="/Images/p1.svg"
                 />
                 <p class="leading-relaxed">
                   "Exceptionally user-friendly, this educational website's
                   organized content and interactive lessons make learning a
                   pleasure. The broad range of topics and engaging quizzes
-                  enhance my understanding. 
+                  enhance my understanding.
                 </p>
                 <span class="inline-block h-1 w-10 rounded bg-green-500 mt-6 mb-4"></span>
                 <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
-                  Bryce 
+                  Bryce
                 </h2>
                 <p class="text-gray-500">Senior Product Designer</p>
               </div>
@@ -31,13 +31,13 @@ function Testimonial() {
                 <img
                   alt="testimonial"
                   class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src="public/Images/p2.svg"
+                  src="/Images/p2.svg"
                 />
                 <p class="leading-relaxed">
                   A teacher's dream, this website enriches my classroom with
                   well-designed lesson plans and multimedia content that
                   captivates students. The progress tracking features empower me
-                  to monitor performance effectively. 
+                  to monitor performance effectively.
                 </p>
                 <span class="inline-block h-1 w-10 rounded bg-green-500 mt-6 mb-4"></span>
                 <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
@@ -51,17 +51,17 @@ function Testimonial() {
                 <img
                   alt="testimonial"
                   class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src="public/Images/p3.svg"
+                  src="/Images/p3.svg"
                 />
                 <p class="leading-relaxed">
                   Discovering this website was a game-changer for my studies.
                   The high-quality content, including videos and simulations,
                   clarifies complex concepts. The community-driven discussion
-                  forums foster collaboration. 
+                  forums foster collaboration.
                 </p>
                 <span class="inline-block h-1 w-10 rounded bg-green-500 mt-6 mb-4"></span>
                 <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
-                  HENRY 
+                  HENRY
                 </h2>
                 <p class="text-gray-500">CTO</p>
               </div>

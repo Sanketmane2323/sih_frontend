@@ -6,10 +6,10 @@ import Research from "./pages/Research";
 import Root from "./pages/Root";
 import LoginForm from "./pages/LoginForm";
 import Signup from "./pages/signup";
-import LoanPage from "./pages/loanPage";
+import LoanPage from "./pages/LoanPage";
 import StudyMaterial from "./pages/StudyMaterial";
 import JobPost from "./pages/jobPost";
-import JobView from "./pages/jobView";
+import JobView from "./pages/JobView";
 
 const router = createBrowserRouter([
   {

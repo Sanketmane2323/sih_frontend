@@ -5,35 +5,35 @@ import { Link } from "react-router-dom";
 function BoxLine() {
   const property = {
     property1: {
-      img1: "public/Images/img2.svg",
+      img1: "/Images/img2.svg",
       p1: "Loans",
     },
     property2: {
-      img2: "public/Images/img3.svg",
+      img2: "/Images/img3.svg",
       p2: "JobPost",
     },
     property3: {
-      img3: "public/Images/img4.svg",
+      img3: "/Images/img4.svg",
       p3: "News",
     },
     property4: {
-      img4: "public/Images/img5.svg",
+      img4: "/Images/img5.svg",
       p4: "Resume Builder",
     },
     property5: {
-      img5: "public/Images/img6.svg",
+      img5: "/Images/img6.svg",
       p5: "Research",
     },
     property6: {
-      img6: "public/Images/img7.svg",
+      img6: "/Images/img7.svg",
       p6: "Research",
     },
     property7: {
-      img7: "public/Images/img8.svg",
+      img7: "/Images/img8.svg",
       p7: "Research",
     },
     property8: {
-      img8: "public/Images/img9.svg",
+      img8: "/Images/img9.svg",
       p8: "Research",
     },
   };
