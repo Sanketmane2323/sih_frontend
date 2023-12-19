@@ -12,7 +12,6 @@ function Home() {
   return (
     <div>
       <Hero />
-      <LogoutButton />
       <BoxLine />
       <CardLine />
       <Join />
