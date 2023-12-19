@@ -1,9 +1,10 @@
 import React from 'react'
+import BoxArrange from '../compo/StudyMaterial/BoxArrange'
 
 function Research() {
   return (
     <div>
-      This is research page
+      this is research page
     </div>
   )
 }
