@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const [token, setToken] = useState("");
-  //   const navigate  = useNavigate();
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
@@ -20,12 +21,11 @@ const LoginForm = () => {
       if (response.ok) {
         const data = await response.json();
         console.log("Login successful!", data);
-        // You can handle the successful login, e.g., redirect to another page.
-
-        ///////////////////////////////////////////
         const obtainedToken = data.token;
-        // Store the token in localStorage
-        localStorage.setItem("token", obtainedToken);
+
+        // Store the token in a cookie
+        document.cookie = `token=${obtainedToken}; expires=Fri, 31 Dec 2023 23:59:59 GMT`;
+
         // Set the token in the component state
         setToken(obtainedToken);
         // Redirect to the WelcomePage
@@ -33,17 +33,17 @@ const LoginForm = () => {
       } else {
         const errorData = await response.json();
         console.error("Login failed:", errorData);
-        // Handle login error, show a message, etc.
       }
     } catch (error) {
       console.error("Error during login:", error);
     }
   };
 
-  if (token) {
-    // If the user is authenticated, render the WelcomePage component
-    // return <WelcomePage />;
-  }
+  useEffect(() => {
+    if (token) {
+      navigate("/");
+    }
+  }, [token, navigate]);
 
   return (
     <div className="overflow-hidden bg-white-900">
