@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function UpperNav() {
   return (
@@ -24,6 +24,7 @@ function UpperNav() {
             >
               (+91) 022857
             </a> */}
+
             <Link
               to="/login"
               className="text-sm text-blue-500  dark:text-blue-500 hover:underline"

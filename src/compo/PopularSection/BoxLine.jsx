@@ -5,19 +5,19 @@ function BoxLine() {
   const property = {
     property1: {
       img1: "public/Images/img2.svg",
-      p1: "Research",
+      p1: "Loans",
     },
     property2: {
       img2: "public/Images/img3.svg",
-      p2: "Research",
+      p2: "Assessment",
     },
     property3: {
       img3: "public/Images/img4.svg",
-      p3: "Research",
+      p3: "Centers",
     },
     property4: {
       img4: "public/Images/img5.svg",
-      p4: "Research",
+      p4: "Resume Builder",
     },
     property5: {
       img5: "public/Images/img6.svg",
@@ -47,14 +47,14 @@ function BoxLine() {
           <Box img={property.property1.img1} name={property.property1.p1} />
           <Box img={property.property2.img2} name={property.property2.p2} />
           <Box img={property.property3.img3} name={property.property3.p3} />
-          <Box img={property.property4.img4} name={property.property4.p4} />
+          <Box img={property.property8.img8} name={property.property4.p4} />
         </div>
-        <div className="flex flex-wrap  justify-center">
+        {/* <div className="flex flex-wrap  justify-center">
           <Box img={property.property5.img5} name={property.property5.p5} />
           <Box img={property.property6.img6} name={property.property6.p6} />
           <Box img={property.property7.img7} name={property.property7.p7} />
           <Box img={property.property8.img8} name={property.property8.p8} />
-        </div>
+        </div> */}
       </div>
     </>
   );
