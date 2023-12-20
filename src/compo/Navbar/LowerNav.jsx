@@ -1,11 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import { useUserStore } from "../../store/user";
 
 function LowerNav() {
-
-  
-
-
+  const { user } = useUserStore();
 
   return (
     <div className="2xl: w-[screen] ">
@@ -264,22 +261,26 @@ function LowerNav() {
                   Home
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/studymaterial"
-                  className="block py-2 pl-3 pr-4 hover:underline decoration-1 text-[#3C4852]  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#08BD80] md:p-0 dark:text-white md:dark:hover:text-[#08BD80] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  StudyMaterials
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/jobs"
-                  className="block py-2 pl-3 pr-4 hover:underline decoration-1 text-[#3C4852]  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#08BD80] md:p-0 dark:text-white md:dark:hover:text-[#08BD80] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Employment
-                </Link>
-              </li>
+              {user && user.type && user.type === "user" && (
+                <li>
+                  <Link
+                    to="http://localhost:3000"
+                    className="block py-2 pl-3 pr-4 hover:underline decoration-1 text-[#3C4852]  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#08BD80] md:p-0 dark:text-white md:dark:hover:text-[#08BD80] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >
+                    Study Materials
+                  </Link>
+                </li>
+              )}
+              {user && user.type && user.type === "employer" && (
+                <li>
+                  <Link
+                    to="/jobs"
+                    className="block py-2 pl-3 pr-4 hover:underline decoration-1 text-[#3C4852]  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#08BD80] md:p-0 dark:text-white md:dark:hover:text-[#08BD80] dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >
+                    Employment
+                  </Link>
+                </li>
+              )}
               <li>
                 <Link
                   to="/loan"
@@ -288,14 +289,16 @@ function LowerNav() {
                   Scheme
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/user"
-                  className="block py-2 pl-3 pr-4 hover:underline decoration-1 text-[#3C4852]  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#08BD80] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  User
-                </Link>
-              </li>
+              {user && (
+                <li>
+                  <Link
+                    to="/user"
+                    className="block py-2 pl-3 pr-4 hover:underline decoration-1 text-[#3C4852]  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#08BD80] md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >
+                    User
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
         </div>

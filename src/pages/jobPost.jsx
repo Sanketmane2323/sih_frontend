@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 
 const JobPost = () => {
   const [formData, setFormData] = useState({
-    title: '',
-    description: '',
-    location: '',
-    salary: '',
+    title: "",
+    description: "",
+    location: "",
+    salary: "",
   });
 
   const handleInputChange = (e) => {
@@ -14,35 +14,36 @@ const JobPost = () => {
       ...formData,
       [name]: value,
     });
-  };       
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Job Created")
-    const apiUrl = 'http://127.0.0.1:8000/grant/jobs/';
-    const authToken = localStorage.getItem('token');
+    alert("Job Created");
+    const apiUrl = "http://127.0.0.1:8000/grant/jobs/";
+    const authToken = localStorage.getItem("token");
     console.log(localStorage);
     try {
       const response = await fetch(apiUrl, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Token ${authToken}`, 
+          "Content-Type": "application/json",
+          Authorization: `Token ${authToken}`,
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         // Handle success, e.g., show a success message or redirect
-        console.log('Data submitted successfully');
+        console.log("Data submitted successfully");
       } else {
         // Handle error, e.g., show an error message
-        console.error('Failed to submit data, u must be logged in and only admin can upload jobs...');
+        console.error(
+          "Failed to submit data, u must be logged in and only admin can upload jobs..."
+        );
       }
     } catch (error) {
-      console.error('Error submitting data:', error);
+      console.error("Error submitting data:", error);
     }
-
   };
 
   return (
@@ -52,7 +53,10 @@ const JobPost = () => {
       </h1>
       <form className="max-w-sm mx-auto" onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="small-input" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">
+          <label
+            htmlFor="small-input"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+          >
             Title
           </label>
           <input
@@ -65,7 +69,10 @@ const JobPost = () => {
           />
         </div>
         <div className="mb-5">
-          <label htmlFor="large-input" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">
+          <label
+            htmlFor="large-input"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+          >
             Description
           </label>
           <input
@@ -78,7 +85,10 @@ const JobPost = () => {
           />
         </div>
         <div className="mb-5">
-          <label htmlFor="base-input" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">
+          <label
+            htmlFor="base-input"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+          >
             Location
           </label>
           <input
@@ -91,7 +101,10 @@ const JobPost = () => {
           />
         </div>
         <div>
-          <label htmlFor="small-input" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black">
+          <label
+            htmlFor="small-input"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"
+          >
             Salary
           </label>
           <input
@@ -106,7 +119,6 @@ const JobPost = () => {
         <br></br>
         <button
           type="submit"
-         
           className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Submit

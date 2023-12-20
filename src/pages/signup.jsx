@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { pb } from "../lib/pocketbase";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
     email: "",
+    type: "",
   });
 
   const handleInputChange = (e) => {
@@ -16,29 +18,22 @@ const Signup = () => {
   };
 
   const handleSignup = async () => {
-    console.log(formData);
-    try {
-      const response = await fetch("http://127.0.0.1:8000/auth/signup/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+    pb.collection("users")
+      .create({
+        username: formData.username,
+        email: formData.email,
+        password: formData.password,
+        passwordConfirm: formData.password,
+        type: formData.type === "" ? "user" : formData.type,
+      })
+      .then((res) => {
+        console.log(res);
+        alert("Signed Up. Please try and login now.");
+      })
+      .catch((err) => {
+        alert("Failed to sign up");
+        console.error(err);
       });
-
-      if (response.ok) {
-        const data = await response.json();
-        console.log("Signup successful:", data);
-
-        // Store the token in a cookie
-        document.cookie = `token=${data.token}; expires=Fri, 31 Dec 2023 23:59:59 GMT`;
-      } else {
-        const errorData = await response.json();
-        console.error("Signup failed:", errorData);
-      }
-    } catch (error) {
-      console.error("Error during signup:", error);
-    }
   };
 
   return (
@@ -188,6 +183,28 @@ const Signup = () => {
                       className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                     >
                       Password
+                    </label>
+                  </div>
+
+                  <div className="relative z-0 w-full mb-5 group">
+                    <select
+                      name="type"
+                      value={formData.type}
+                      onChange={handleInputChange}
+                      id="floating_type"
+                      className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" "
+                      required
+                      defaultValue="user"
+                    >
+                      <option value="user">User</option>
+                      <option value="employer">Employer</option>
+                    </select>
+                    <label
+                      htmlFor="floating_type"
+                      className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    >
+                      Type
                     </label>
                   </div>
 

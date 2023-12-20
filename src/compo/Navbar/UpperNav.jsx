@@ -1,30 +1,12 @@
-import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import LogoutButton from "../../pages/logout";
+import { useUserStore } from "../../store/user";
+import { useEffect } from "react";
 
 function UpperNav() {
-  const [visible, setVisible] = useState(true);
-  const navigate = useNavigate();
+  const { user } = useUserStore();
 
-  useEffect(() => {
-    // Get the token from the cookie
-    const cookie = document.cookie
-      .split("; ")
-      .find((row) => row.startsWith("token="));
-
-    if (cookie) {
-      setVisible(false);
-    } else {
-      setVisible(true);
-    }
-
-    // Navigate to '/' to trigger a re-render
-    navigate("/");
-  }, [navigate]);
-
-  // ... rest of your component ...
-
-  // ... rest of your component ...
+  useEffect(() => {}, [user]);
 
   return (
     <div>
@@ -41,7 +23,7 @@ function UpperNav() {
             </span>
           </div>
           <div className="justify-between flex items-center ">
-            {visible ? (
+            {user == null ? (
               <>
                 <Link
                   to="/login"

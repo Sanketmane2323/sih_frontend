@@ -1,4 +1,5 @@
 import React from "react";
+import { pb } from "./lib/pocketbase";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "flowbite";
 import Home from "./pages/Home";
@@ -15,6 +16,8 @@ import TechnologyNews from "./compo/News/TechnologyNews";
 import AddBlog from "./compo/News/AddBlog";
 import SubjectList from "./pages/SubjectList";
 import LessonList from "./pages/lessonList";
+import { useEffect } from "react";
+import { useUserStore } from "./store/user";
 
 const router = createBrowserRouter([
   {
@@ -34,12 +37,24 @@ const router = createBrowserRouter([
       { path: "/news/business", element: <BusinessNews /> },
       { path: "/news/technology", element: <TechnologyNews /> },
       { path: "/news/blogs", element: <AddBlog /> },
-
     ],
   },
 ]);
 
 function App() {
+  const { user, setUser } = useUserStore();
+
+  useEffect(() => {
+    if (pb.authStore.isValid) {
+      pb.collection("users")
+        .getOne(pb.authStore.model.id)
+        .then((res) => {
+          console.log("Refreshed Data : ", res);
+          setUser(res);
+        });
+    }
+  }, [setUser, user]);
+
   return (
     <>
       <RouterProvider router={router} />

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "pb:win": ".\\pocketbase\\pocketbase.exe serve",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -12,10 +13,12 @@
   "dependencies": {
     "axios": "^1.6.2",
     "flowbite": "^2.2.0",
+    "pocketbase": "^0.20.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.21.0",
-    "react-router-dom": "^6.21.0"
+    "react-router-dom": "^6.21.0",
+    "zustand": "^4.4.7"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",

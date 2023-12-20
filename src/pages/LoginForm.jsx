@@ -1,49 +1,29 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { pb } from "../lib/pocketbase";
+import { useUserStore } from "../store/user";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const { setUser } = useUserStore();
 
-  const [token, setToken] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async () => {
-    try {
-      const response = await fetch("http://127.0.0.1:8000/auth/login/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, password }),
+  const handleLogin = () => {
+    pb.collection("users")
+      .authWithPassword(username, password)
+      .then((res) => {
+        alert("Logged In");
+        console.log(res.record);
+        setUser({ ...res.record });
+        navigate("/");
+      })
+      .catch((err) => {
+        alert("Failed to login");
+        console.error(err);
       });
-
-      if (response.ok) {
-        const data = await response.json();
-        console.log("Login successful!", data);
-        const obtainedToken = data.token;
-
-        // Store the token in a cookie
-        document.cookie = `token=${obtainedToken}; expires=Fri, 31 Dec 2023 23:59:59 GMT`;
-
-        // Set the token in the component state
-        setToken(obtainedToken);
-        // Redirect to the WelcomePage
-        // navigate('/welcome');
-      } else {
-        const errorData = await response.json();
-        console.error("Login failed:", errorData);
-      }
-    } catch (error) {
-      console.error("Error during login:", error);
-    }
   };
-
-  useEffect(() => {
-    if (token) {
-      navigate("/");
-    }
-  }, [token, navigate]);
 
   return (
     <div className="overflow-hidden bg-white-900">
