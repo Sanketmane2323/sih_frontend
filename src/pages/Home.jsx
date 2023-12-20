@@ -5,11 +5,13 @@ import CardLine from "../compo/Card/CardLine";
 import Join from "../compo/Join/Join";
 import Footer from "../compo/Footer/Footer";
 import YourComponent from "../compo/YourComponent";
+import Display from "../compo/Loan/Display";
 
 function Home() {
   return (
     <div>
       <Hero />
+      
       <BoxLine />
       <CardLine />
       <Join />
