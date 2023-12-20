@@ -81,6 +81,7 @@ const JobView = () => {
             </div>
           ))}
         </div>
+        {/* <p>This is job view page</p> */}
       </div>
     </section>
   );

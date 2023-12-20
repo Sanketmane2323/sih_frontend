@@ -14,14 +14,14 @@ const JobPost = () => {
       ...formData,
       [name]: value,
     });
-  };
+  };       
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    alert("Job Created")
     const apiUrl = 'http://127.0.0.1:8000/grant/jobs/';
     const authToken = localStorage.getItem('token');
-    
+    console.log(localStorage);
     try {
       const response = await fetch(apiUrl, {
         method: 'POST',
