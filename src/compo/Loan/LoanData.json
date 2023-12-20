@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "title": "Chief Ministers Special Rural Development Fund (CMSRDF)",
+    "category": "Agriculture",
+    "description":
+      "The primary objective of the program is to generate wage employment and creation of socially and economically useful public assets by involving peoples participation at the grassroots level. The schemes undertaken in the program are varied in nature and are selected by the MLA and NGOs.",
+    "apply_src": ""
+  },
+  {
+    "id": 2,
+    "title": "National Agriculture Market",
+    "category": "Agriculture",
+    "description":
+      "e-NAM a pan-India electronic trading portal was launched on 14th April 2016, by the Prime Minister of India, with the aim of networking the existing mandis on a common online market platform as “One Nation One Market” for agricultural commodities in India.",
+    "apply_src": "https://www.myscheme.gov.in/schemes/e-nam"
+  },
+  {
+    "id": 3,
+    "title": " Kisan Credit Card",
+    "category": "Agriculture",
+    "description":
+      "The Kisan Credit Card (KCC) scheme was introduced in 1998 for issue of Kisan Credit Cards to farmers on the basis of their holdings for uniform adoption by the banks so that farmers may use them to readily purchase agriculture inputs and draw cash for their production needs.",
+      "apply_src": "https://www.myscheme.gov.in/schemes/e-nam"
+  },
+  {
+    "id": 4,
+    "title": "Kalpana Chawla Chatravriti Yojana",
+    "category": "Education",
+    "description":
+      "Launched in 2012-13 by the Govt. of Himachal Pradesh, the Kalpana Chawla Chatravriti Yojana is a scholarship scheme that provides financial assistance to girls from economically weaker sections to pursue higher education without any financial burden, and achieve their career goals.",
+    "apply_src": ""
+  },
+
+  {
+    "id": 5,
+    "title":
+      "Innovation In Science Pursuit For Inspired Research (INSPIRE) - Internship Ministers Special Rural Development Fund (CMSRDF)",
+    "category": "Education",
+    "description":
+      "INSPIRE INTERNSHIP aims to provide exposure to the top 1% of students at the Class X Board level by organizing Science Camps either during summer or winter which provides an opportunity for them to interact with Science icons from India and abroad, including Nobel Laureates..",
+
+    "apply_src": ""
+  }
+]

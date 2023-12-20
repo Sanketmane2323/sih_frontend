@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import Root from "./pages/Root";
 import LoginForm from "./pages/LoginForm";
 import Signup from "./pages/signup";
-import LoanPage from "./pages/loanPage";
 import JobPost from "./pages/jobPost";
 import JobView from "./pages/jobView";
 import UserProfile from "./userProfile";
@@ -18,6 +17,7 @@ import SubjectList from "./pages/SubjectList";
 import LessonList from "./pages/lessonList";
 import { useEffect } from "react";
 import { useUserStore } from "./store/user";
+import Display from "./compo/Loan/Display";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +29,8 @@ const router = createBrowserRouter([
       { path: "/subject/:id", element: <LessonList /> },
       { path: "/jobpost", element: <JobPost /> },
       { path: "/jobs", element: <JobView /> },
-      { path: "/loan", element: <LoanPage /> },
+      { path: "/loan", element: <Display /> },
+
       { path: "/user", element: <UserProfile /> },
       { path: "/login", element: <LoginForm /> },
       { path: "/signup", element: <Signup /> },
