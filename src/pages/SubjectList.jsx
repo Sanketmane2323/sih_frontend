@@ -10,6 +10,8 @@ const SubjectList = () => {
     fetch("http://127.0.0.1:8000/api/subjects/") // Replace with your actual API endpoint
       .then((response) => response.json())
       .then((data) => setSubjects(data))
+      .then((data) => console.log(data))
+
       .catch((error) => console.error("Error fetching data:", error));
   }, []); // Empty dependency array means this effect runs once when the component mounts
 
